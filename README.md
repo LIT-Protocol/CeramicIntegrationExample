@@ -2,15 +2,15 @@
 
 ### Welcome!
 
-Welcome to the Lit Ceramic Integration web playground. This is a playground for the lit-ceramic-integration module, to show anyone who's interested what it looks like in practice! It uses this module to encrypt (with Lit) and store (with Cermamic) any string the user wants to store. It will be accessible only to those who control the wallet of the user that made it. It appears on the ceramic network as encrypted data.
+Welcome to the [Lit Ceramic Integration](https://github.com/LIT-Protocol/CeramicIntegration) web playground. This is a playground for the [lit-ceramic-integration module](https://www.npmjs.com/package/@litelliott/lit-ceramic-integration), to show anyone who's interested what it looks like in practice! It uses this module to encrypt (with Lit) and store (with Cermamic) any string the user wants to store. It will be accessible only to those who control the wallet of the user that made it. It appears on the ceramic network as encrypted data.
 
 ### Quick and Dirty Instructions for running in dev
 
 Make sure to run `yarn` to install everything at first.
 
-If one needs to build: `npx webpack --hot`
+Normally, just run `yarn parcel index.html`
 
-But normally I just run `yarn parcel index.html`
+But if one needs to build: `npx webpack --hot`
 
 ## [Ceramic Web Playground](https://ceramicstudio.github.io/web-playground/)
 
