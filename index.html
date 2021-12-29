@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Lit/Ceramic Integration Playground</title>
+    <meta
+      name="description"
+      content="Test the full stack of Ceramic Network components in a web browser."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f7f7f9;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: auto;
+        padding-top: 25px;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+        /* margin-left: 40px; */
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      main {
+        max-width: 600px;
+      }
+      img {
+        height: 100px;
+        width: 100px;
+      }
+      .logo {
+        height: 75px;
+        width: 75px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .hide {
+        display: none;
+        padding: 0;
+        margin: 0;
+      }
+      .center {
+        margin: 0 auto;
+      }
+      .loader {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        vertical-align: text-bottom;
+        border: 0.25em solid currentColor;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spin 1s linear infinite;
+        -moz-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+        margin-right: 10px;
+      }
+      @-moz-keyframes spin {
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      .alert {
+        margin-top: 15px;
+      }
+      .space-around {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
+      .ceramic-btn.active {
+        background-color: #f87237 !important;
+        color: white !important;
+      }
+      .idx-btn.active {
+        background-color: #6535ff !important;
+        color: white !important;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      .documentation {
+        resize: both;
+        overflow: auto;
+        height: 200px;
+        width: 100%;
+        border: 1px solid transparent;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="row">
+          <div class="col-xs-12 alert hide" role="alert" id="alerts"></div>
+          <div class="col-xs-offset-10 col-xs-2">
+            <span class="badge rounded-pill bg-secondary" id="userDID">Not Connected</span>
+          </div>
+        </div>
+        <div>
+          <img id="logo" src="images/lit-logo.png" alt="lit ceramic playground" />
+          +
+          <img id="logo" src="images/web-playground-logo.svg" alt="web playground logo" />
+        </div>
+        <h1>Lit / Ceramic Web Playground</h1>
+        <p>
+          Test out the Lit / Ceramic integration.
+          <br />
+          Encrypt with Lit and commit to the Ceramic network
+          <br />
+          then read from it back using ceramic and decrypt with Lit.
+        </p>
+        <form>
+          <br />
+          <label for="fname">Secret:</label>
+          <input type="text" id="secret" name="secret" value="Type Secret Here!" /><br />
+        </form>
+      </header>
+
+      <main class="container center">
+        <div class="row">
+          <div class="col-xs-12 space-around">
+            <br />
+            <br />
+            <div id="stream"></div>
+          </div>
+          <div class="col-xs-12 col-lg-6">
+            <iframe
+              class="documentation"
+              src="https://developers.ceramic.network/build/javascript/quick-start/"
+              id="ceramic_docs"
+            >
+            </iframe>
+          </div>
+          <div class="col-xs-12 col-lg-6 text-right">
+            <iframe
+              class="documentation"
+              src="https://developers.idx.xyz/build/quick-start/"
+              id="idx_docs"
+            ></iframe>
+          </div>
+        </div>
+
+        <div id="encryptLit">
+          <button
+            id="encryptLit"
+            type="button"
+            class="btn btn-primary center"
+            style="display: inherit; margin: 20px auto"
+          >
+            Encrypt w/ Lit + Send
+          </button>
+        </div>
+
+        <div id="readCeramic">
+          <button
+            id="readCeramic"
+            type="button"
+            class="btn btn-primary center"
+            style="display: inherit; margin: 20px auto"
+          >
+            Read then Decrypt w/ Lit
+          </button>
+        </div>
+        <div id="decryption"></div>
+      </main>
+    </div>
+  </body>
+  <script type="module" src="src/app.ts"></script>
+</html>
