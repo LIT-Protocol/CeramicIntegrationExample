@@ -1,5 +1,5 @@
 import { DID } from 'dids'
-import { Integration } from '@litelliott/lit-ceramic-integration'
+import { Integration } from 'lit-ceramic-sdk'
 
 declare global {
   interface Window {
@@ -55,8 +55,22 @@ document.getElementById('readCeramic')?.addEventListener('click', () => {
 document.getElementById('encryptLit')?.addEventListener('click', function () {
   // @ts-ignore
   const stringToEncrypt = document.getElementById('secret').value
+  // User must posess at least 0.000001 ETH on eth
+  const accessControlConditions = [
+    {
+      contractAddress: '',
+      standardContractType: '',
+      chain: 'ethereum',
+      method: 'eth_getBalance',
+      parameters: [':userAddress', 'latest'],
+      returnValueTest: {
+        comparator: '>=',
+        value: '1000000000000',
+      },
+    },
+  ]
   const response = litCeramicIntegration
-    .encryptAndWrite(stringToEncrypt)
+    .encryptAndWrite(stringToEncrypt, accessControlConditions)
     .then((value) => updateStreamID(value))
   console.log(response)
 })

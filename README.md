@@ -10,8 +10,6 @@ Make sure to run `yarn` to install everything at first.
 
 Normally, just run `yarn parcel index.html`
 
-But if one needs to build: `npx webpack --hot`
-
 ## [Ceramic Web Playground](https://ceramicstudio.github.io/web-playground/)
 
 Test the full stack of [Ceramic Network](https://ceramic.network/) components in a web browser. This project is based off of the above ceramic playground.
@@ -24,6 +22,8 @@ Test the full stack of [Ceramic Network](https://ceramic.network/) components in
 
 ## Usage
 
+The app is configured to only let users with at least 0.000001 ETH decrypt the content. This access control condition can be changed to anything you want. You can find some examples here: https://developer.litprotocol.com/docs/SDK/accessControlConditionExamples
+
 1. Open the [Playground page, often localhost:1234 when running parcel](http://localhost:1234)
 2. Open your browser's console by inspecting the page
 3. Click Encrypt w/ Lit + Send button to begin process!
@@ -31,16 +31,6 @@ Test the full stack of [Ceramic Network](https://ceramic.network/) components in
 5. Approve prompts in your Web3 wallet for both Ceramic and Lit
 6. Wait to see "Connected with DID" in your console
 7. Write and read Lit-Encrypted documents on the Ceramic Network from the console using the referenced API methods
-
-### To Do:
-
-- swap/copy over to the LIT company owned repo
-- Blogpost
-
-#### Soon:
-
-- Allow for Lit Node (and Ceramic Node) to be editable
-- Port over and clean up learnings scattered among older MD docs
 
 ## License
 

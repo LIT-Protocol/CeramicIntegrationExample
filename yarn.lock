@@ -984,33 +984,6 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@litelliott/lit-ceramic-integration@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@litelliott/lit-ceramic-integration/-/lit-ceramic-integration-1.1.0.tgz#2593a40728b1cf8206fed50eaeb6d3aad7da9b29"
-  integrity sha512-DY4UrUrdlYuRuGt7TVava5ZR/S+ZmvQt6gmgvSpkhn9Jlr2fMSvp3TpqZP9m/CSke8bQoQSFQus0elrWomj9bw==
-  dependencies:
-    "@3id/connect" "^0.1.6"
-    "@ceramicnetwork/3id-did-resolver" "^1.2.7"
-    "@ceramicnetwork/common" "^1.1.0"
-    "@ceramicnetwork/http-client" "^1.0.7"
-    "@ceramicstudio/idx" "^0.12.1"
-    "@ceramicstudio/idx-tools" "^0.11.0"
-    "@walletconnect/web3-provider" "^1.3.3"
-    authereum "^0.1.0"
-    dag-jose "^0.3.0"
-    dids "^2.1.0"
-    documentation "^13.2.5"
-    fortmatic "^2.2.1"
-    http-server "^14.0.0"
-    key-did-resolver "^1.2.0"
-    lit-js-sdk "^1.1.80"
-    multiformats "~4.6.1"
-    skynet-js "^4.0.5-beta"
-    typescript "^4.5.4"
-    uint8arrays "^3.0.0"
-    web3modal "^1.9.3"
-    webpack-dev-server "^4.5.0"
-
 "@metamask/detect-provider@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@metamask/detect-provider/-/detect-provider-1.2.0.tgz#3667a7531f2a682e3c3a43eaf3a1958bdb42a696"
@@ -8105,6 +8078,33 @@ lines-and-columns@^1.1.6:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
+
+lit-ceramic-sdk@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/lit-ceramic-sdk/-/lit-ceramic-sdk-1.1.2.tgz#faab4a786b5cd4cc01f49f6a0904e9700ec36d64"
+  integrity sha512-/Xj3UIEgz6hv9+/qPG1139Jb+v6WNoecAXuaWF0OTEoOwhTIYUMAsnS+bx6VgTil5UUulLcyjRTqj2RVZRB0GQ==
+  dependencies:
+    "@3id/connect" "^0.1.6"
+    "@ceramicnetwork/3id-did-resolver" "^1.2.7"
+    "@ceramicnetwork/common" "^1.1.0"
+    "@ceramicnetwork/http-client" "^1.0.7"
+    "@ceramicstudio/idx" "^0.12.1"
+    "@ceramicstudio/idx-tools" "^0.11.0"
+    "@walletconnect/web3-provider" "^1.3.3"
+    authereum "^0.1.0"
+    dag-jose "^0.3.0"
+    dids "^2.1.0"
+    documentation "^13.2.5"
+    fortmatic "^2.2.1"
+    http-server "^14.0.0"
+    key-did-resolver "^1.2.0"
+    lit-js-sdk "^1.1.80"
+    multiformats "~4.6.1"
+    skynet-js "^4.0.5-beta"
+    typescript "^4.5.4"
+    uint8arrays "^3.0.0"
+    web3modal "^1.9.3"
+    webpack-dev-server "^4.5.0"
 
 lit-js-sdk@^1.1.80:
   version "1.1.80"
