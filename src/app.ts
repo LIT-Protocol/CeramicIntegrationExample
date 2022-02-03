@@ -23,8 +23,8 @@ const updateAlert = (status: string, message: string) => {
     }, 5000)
   }
 }
-const updateStreamID = (resp: String) => {
-  streamID = resp
+const updateStreamID = (resp: string | String) => {
+  streamID = resp as string
   console.log('you now have this as your streamID', streamID)
   // @ts-ignore
   document.getElementById('stream').innerText = resp

@@ -10,11 +10,9 @@
     "url": "git+https://github.com/ceramicstudio/web-playground.git"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "parcel build index.html",
     "lint": "eslint src",
-    "start": "parcel index.html",
-    "watch": "webpack --watch",
-    "hot": "webpack --watch"
+    "start": "parcel index.html"
   },
   "dependencies": {
     "@3id/connect": "^0.1.6",
@@ -30,7 +28,7 @@
     "fortmatic": "^2.2.1",
     "http-server": "^14.0.0",
     "key-did-resolver": "^1.2.0",
-    "lit-ceramic-sdk": "^1.1.2",
+    "lit-ceramic-sdk": "^1.1.6",
     "lit-js-sdk": "^1.1.80",
     "multiformats": "~4.6.1",
     "skynet-js": "^4.0.5-beta",

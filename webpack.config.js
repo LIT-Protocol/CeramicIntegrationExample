@@ -4,7 +4,6 @@ module.exports = {
   mode: 'production',
   entry: {
     app: './src/app.ts',
-    skydb: './src/skydb.ts',
   },
   output: {
     filename: '[name].js',
